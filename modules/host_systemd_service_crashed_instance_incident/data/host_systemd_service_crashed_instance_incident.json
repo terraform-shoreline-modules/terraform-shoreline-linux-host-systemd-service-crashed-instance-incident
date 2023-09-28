@@ -7,7 +7,7 @@
       "value": ""
     },
     {
-      "name": "IP_ADDRESS",
+      "name": "HOST_INSTANCE",
       "value": ""
     },
     {
@@ -15,7 +15,7 @@
       "value": ""
     },
     {
-      "name": "HOST_INSTANCE",
+      "name": "IP_ADDRESS",
       "value": ""
     },
     {
@@ -144,7 +144,7 @@
       "name": "cell_19",
       "type": "OP_LANG",
       "enabled": true,
-      "content": "host | host_name=$HOST_NAME | invoke_cpu_mem_restart_service($SYSTEMD_SERVICE_NAME)"
+      "content": "host | host_name=$HOST_NAME | invoke_cpu_mem_check($SYSTEMD_SERVICE_NAME)"
     },
     {
       "name": "cell_20",
@@ -156,7 +156,7 @@
       "name": "cell_21",
       "type": "OP_LANG",
       "enabled": true,
-      "content": "host | host_name=$HOST_NAME | invoke_restart_systemd_service($SYSTEMD_SERVICE_NAME, $HOST_INSTANCE)"
+      "content": "host | host_name=$HOST_NAME | invoke_restart_service($SYSTEMD_SERVICE_NAME, $HOST_INSTANCE)"
     }
   ]
 }
